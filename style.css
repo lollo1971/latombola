@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: red;
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('mega.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+    color: black;
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+#board {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Spazio tra le cartelle */
+}
+
+.cartella {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 colonne per ogni cartella */
+    gap: 5px; /* Spazio tra le celle */
+    border: 2px solid #000; /* Bordo per ogni cartella */
+    padding: 10px;
+}
+
+.cartella div {
+    padding: 10px;
+    background-color: #ffff99; /* Sfondo giallo chiaro per le celle */
+    color: green; /* Colore del testo verde */
+    border: 1px solid #000; /* Bordo per ogni numero */
+    text-align: center;
+    font-weight: bold;
+}
+
+.drawn {
+    background-color: blue; /* Sfondo per i numeri estratti */
+    color: white;
+}
+
+/* Stili per i numeri estratti */
+.cartella div.drawn {
+    background-color: blue; /* Sfondo blu per i numeri estratti */
+    color: white; /* Testo bianco per contrasto */
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+#resetNotification {
+    margin-top: 20px;
+}
+
+#currentNumber {
+    font-size: 24px;
+    margin-top: 20px;
+}
